@@ -1,5 +1,5 @@
 <svg width="1200" height="440" viewBox="0 0 1200 440" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">武魁 · Wu Kui — AI Infrastructure, CUDA Kernels, and LLM Serving</title>
+  <title id="title">吴逵 · Wu Kui — AI Infrastructure, CUDA Kernels, and LLM Serving</title>
   <desc id="desc">An animated indigo, violet, and cyan profile banner inspired by GPU grids and data flow.</desc>
 
   <defs>
@@ -66,7 +66,7 @@
       <circle cx="94" cy="81" r="5" fill="#22D3EE" filter="url(#soft-glow)" class="pulse"/>
       <text x="110" y="86" fill="#A5F3FC" font-size="13" font-weight="700" letter-spacing="1.2">AI INFRA BUILDER</text>
 
-      <text x="74" y="157" fill="#F8FAFC" font-size="50" font-weight="800" letter-spacing="-1">武魁 · Wu Kui</text>
+      <text x="74" y="157" fill="#F8FAFC" font-size="50" font-weight="800" letter-spacing="-1">吴逵 · Wu Kui</text>
       <text x="76" y="204" fill="#C4B5FD" font-size="23" font-weight="650">AI Infrastructure · CUDA Kernels · LLM Serving</text>
       <text x="76" y="246" fill="#94A3B8" font-size="16" font-weight="500">Benchmark-driven systems, reproducible experiments, measurable speedups.</text>
 

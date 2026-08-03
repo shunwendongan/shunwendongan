@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/hero-ai-infra.svg" width="100%" alt="武魁 · Wu Kui — AI Infrastructure, CUDA Kernels, and LLM Serving" />
+<img src="./assets/hero-ai-infra.svg" width="100%" alt="吴逵 · Wu Kui — AI Infrastructure, CUDA Kernels, and LLM Serving" />
 
 <br />
 
