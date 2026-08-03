@@ -1,0 +1,115 @@
+<svg width="1200" height="440" viewBox="0 0 1200 440" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">武魁 · Wu Kui — AI Infrastructure, CUDA Kernels, and LLM Serving</title>
+  <desc id="desc">An animated indigo, violet, and cyan profile banner inspired by GPU grids and data flow.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="55" y1="12" x2="1140" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111F"/>
+      <stop offset="0.48" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#312E81"/>
+      <animate attributeName="x1" values="55;180;55" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1140;1010;1140" dur="14s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(960 95) rotate(131) scale(265 330)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#A78BFA" stroke-opacity="0.08"/>
+    </pattern>
+    <clipPath id="card-clip">
+      <rect x="18" y="18" width="1164" height="404" rx="28"/>
+    </clipPath>
+    <style>
+      .ui { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', Arial, sans-serif; }
+      .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; }
+      .flow { stroke-dasharray: 8 13; animation: flow 4s linear infinite; }
+      .pulse { animation: pulse 3.2s ease-in-out infinite; transform-origin: center; }
+      .blink { animation: blink 1.05s steps(1, end) infinite; }
+      @keyframes flow { to { stroke-dashoffset: -42; } }
+      @keyframes pulse { 0%, 100% { opacity: .38; } 50% { opacity: 1; } }
+      @keyframes blink { 0%, 48% { opacity: 1; } 49%, 100% { opacity: 0; } }
+    </style>
+  </defs>
+
+  <g clip-path="url(#card-clip)">
+    <rect x="18" y="18" width="1164" height="404" rx="28" fill="url(#background)"/>
+    <rect x="18" y="18" width="1164" height="404" rx="28" fill="url(#grid)"/>
+    <rect x="18" y="18" width="1164" height="404" rx="28" fill="url(#glow)"/>
+
+    <circle cx="145" cy="78" r="92" fill="#7C3AED" fill-opacity="0.10">
+      <animate attributeName="r" values="86;108;86" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1060" cy="348" r="150" fill="#22D3EE" fill-opacity="0.06">
+      <animate attributeName="r" values="138;172;138" dur="10s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Data flow from the profile statement into the GPU tile. -->
+    <path d="M650 101C750 101 744 155 824 155" class="flow" stroke="url(#accent)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M650 214C745 214 753 201 824 201" class="flow" stroke="url(#accent)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <path d="M650 327C745 327 755 247 824 247" class="flow" stroke="url(#accent)" stroke-width="2" stroke-linecap="round" opacity="0.45"/>
+
+    <!-- Main identity. -->
+    <g class="ui">
+      <rect x="74" y="66" width="172" height="30" rx="15" fill="#22D3EE" fill-opacity="0.12" stroke="#22D3EE" stroke-opacity="0.35"/>
+      <circle cx="94" cy="81" r="5" fill="#22D3EE" filter="url(#soft-glow)" class="pulse"/>
+      <text x="110" y="86" fill="#A5F3FC" font-size="13" font-weight="700" letter-spacing="1.2">AI INFRA BUILDER</text>
+
+      <text x="74" y="157" fill="#F8FAFC" font-size="50" font-weight="800" letter-spacing="-1">武魁 · Wu Kui</text>
+      <text x="76" y="204" fill="#C4B5FD" font-size="23" font-weight="650">AI Infrastructure · CUDA Kernels · LLM Serving</text>
+      <text x="76" y="246" fill="#94A3B8" font-size="16" font-weight="500">Benchmark-driven systems, reproducible experiments, measurable speedups.</text>
+
+      <rect x="74" y="282" width="574" height="72" rx="14" fill="#020617" fill-opacity="0.58" stroke="#8B5CF6" stroke-opacity="0.42"/>
+      <circle cx="96" cy="301" r="4" fill="#FB7185"/>
+      <circle cx="111" cy="301" r="4" fill="#FBBF24"/>
+      <circle cx="126" cy="301" r="4" fill="#34D399"/>
+      <text x="96" y="332" class="mono" fill="#22D3EE" font-size="16" font-weight="600">$ measure → profile → optimize → verify</text>
+      <rect x="561" y="317" width="9" height="20" rx="1" fill="#22D3EE" class="blink"/>
+    </g>
+
+    <!-- Abstract GPU tile: 4x4 compute blocks and memory/data rails. -->
+    <g transform="translate(830 91)">
+      <rect width="284" height="258" rx="24" fill="#0F172A" fill-opacity="0.76" stroke="url(#accent)" stroke-width="2"/>
+      <rect x="22" y="22" width="240" height="28" rx="9" fill="#312E81" fill-opacity="0.72"/>
+      <text x="36" y="41" class="mono" fill="#C4B5FD" font-size="12" font-weight="700" letter-spacing="1">GPU // KERNEL PIPELINE</text>
+
+      <g transform="translate(28 70)">
+        <rect width="46" height="34" rx="7" fill="#7C3AED" fill-opacity="0.36" stroke="#A78BFA" stroke-opacity="0.72"/>
+        <rect x="56" width="46" height="34" rx="7" fill="#7C3AED" fill-opacity="0.48" stroke="#A78BFA" stroke-opacity="0.82"/>
+        <rect x="112" width="46" height="34" rx="7" fill="#22D3EE" fill-opacity="0.26" stroke="#22D3EE" stroke-opacity="0.75" class="pulse"/>
+        <rect x="168" width="46" height="34" rx="7" fill="#7C3AED" fill-opacity="0.32" stroke="#A78BFA" stroke-opacity="0.65"/>
+
+        <rect y="44" width="46" height="34" rx="7" fill="#22D3EE" fill-opacity="0.20" stroke="#22D3EE" stroke-opacity="0.55"/>
+        <rect x="56" y="44" width="46" height="34" rx="7" fill="#7C3AED" fill-opacity="0.34" stroke="#A78BFA" stroke-opacity="0.65"/>
+        <rect x="112" y="44" width="46" height="34" rx="7" fill="#7C3AED" fill-opacity="0.46" stroke="#A78BFA" stroke-opacity="0.82"/>
+        <rect x="168" y="44" width="46" height="34" rx="7" fill="#22D3EE" fill-opacity="0.34" stroke="#22D3EE" stroke-opacity="0.78" class="pulse"/>
+
+        <rect y="88" width="46" height="34" rx="7" fill="#7C3AED" fill-opacity="0.42" stroke="#A78BFA" stroke-opacity="0.75"/>
+        <rect x="56" y="88" width="46" height="34" rx="7" fill="#22D3EE" fill-opacity="0.30" stroke="#22D3EE" stroke-opacity="0.72" class="pulse"/>
+        <rect x="112" y="88" width="46" height="34" rx="7" fill="#7C3AED" fill-opacity="0.28" stroke="#A78BFA" stroke-opacity="0.58"/>
+        <rect x="168" y="88" width="46" height="34" rx="7" fill="#7C3AED" fill-opacity="0.40" stroke="#A78BFA" stroke-opacity="0.74"/>
+      </g>
+
+      <g transform="translate(28 210)">
+        <rect width="214" height="8" rx="4" fill="#1E293B"/>
+        <rect width="156" height="8" rx="4" fill="url(#accent)">
+          <animate attributeName="width" values="92;178;156;92" dur="6s" repeatCount="indefinite"/>
+        </rect>
+        <text x="0" y="28" class="mono" fill="#64748B" font-size="10">THROUGHPUT / LATENCY / CORRECTNESS</text>
+      </g>
+    </g>
+  </g>
+
+  <rect x="18" y="18" width="1164" height="404" rx="28" stroke="url(#accent)" stroke-opacity="0.65" stroke-width="2"/>
+</svg>
